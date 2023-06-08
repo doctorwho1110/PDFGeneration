@@ -14,7 +14,12 @@ for index, row in df.iterrows():
     pdf.cell(w=0, h=12, txt=row["Topic"], align="L",
              ln=1, border=0)
     # pdf.image("complete.png",50,10,w=0,h=12)
-    pdf.line(10, 20, 200, 20)
+
+    # pdf.line(10, 20, 200, 20)
+
+    # pdf.line(10,10ar 10ar artacak, 200, 10ar 10ar artacak)
+    for i in range(20, 277, 10):
+        pdf.line(10, i, 200, i)
 
     # Set the footer
     pdf.ln(265)
@@ -24,6 +29,12 @@ for index, row in df.iterrows():
 
     for i in range(row["Pages"] - 1):
         pdf.add_page()
+
+        # pdf.line(10, 30, 200, 30)
+
+        # pdf.line(10,10ar 10ar artacak, 200, 10ar 10ar artacak)
+        for i in range(20, 277, 10):
+            pdf.line(10, i, 200, i)
 
         # Set the footer
         pdf.ln(277)
